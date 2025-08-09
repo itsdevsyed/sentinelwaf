@@ -1,0 +1,16 @@
+# Air config to specify main.go location and build/run commands
+
+# Working directory (where your code lives)
+root = "."
+
+# The main Go file to build
+tmp_dir = "tmp"
+
+[build]
+  cmd = "go build -o ./tmp/main.exe ./cmd/waf"
+  include_ext = ["go", "tpl", "tmpl", "html"]
+  exclude_dir = ["tmp", "vendor"]
+  bin = "tmp/main.exe"
+
+[log]
+  time = true
